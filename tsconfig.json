@@ -4,6 +4,12 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "@core/*": ["./src/app/core/*"],
+      "@libs/*": ["./src/app/libs/*"],
+      "@pages/*": ["./src/app/pages/*"],
+      "@domain/*": ["./src/app/domain/*"]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
