@@ -17,15 +17,18 @@ export class MenuComponent {
       this.items = [
           {
               label: 'Resumen',
-              icon: 'pi pi-home',              
+              icon: 'pi pi-home',            
+              route: ''  
           },
           {
               label: 'Comics',
-              icon: 'pi pi-star'
+              icon: 'pi pi-star',
+              route: '/comics'
           },          
           {
               label: 'Juegos',
-              icon: 'pi pi-envelope'
+              icon: 'pi pi-envelope',
+              route: '/juegos'
           }
       ]
   }
