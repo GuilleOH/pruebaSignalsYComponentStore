@@ -1,1 +1,29 @@
-<p>comics works!</p>
+<p-table [value]="store.comics()">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Título</th>
+            <th>Editorial</th>
+            <th>Valor</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-comic>
+        <tr>
+            <td>{{ comic.title }}</td>
+            <td>{{ comic.editorial }}</td>
+            <td>{{ comic.value }}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<form [formGroup]="newComicForm" (ngSubmit)="addComic()">
+    <label for="title">Título: </label>
+    <input pInputText  id="title" type="text" formControlName="title">
+    <label for="editorial">Editorial: </label>
+    <input pInputText  id="editorial" type="text" formControlName="editorial">
+    <label for="value">Valor: </label>
+    <input pInputText  id="value" type="number" formControlName="value">
+    <p-button type="submit" label="Añadir comic" [disabled]="!newComicForm.valid"/>
+  </form>
+
+  <h1>Valor total de tus comics: {{store.valorTotalComics()}}</h1>

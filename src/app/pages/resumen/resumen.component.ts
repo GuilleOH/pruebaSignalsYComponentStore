@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
+import { CollectionStore } from '../collection.store';
 
 @Component({
   selector: 'app-resumen',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './resumen.component.scss'
 })
 export class ResumenComponent {
+  protected readonly store = inject(CollectionStore);
+
 
 }
